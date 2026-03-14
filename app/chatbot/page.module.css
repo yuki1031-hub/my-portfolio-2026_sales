@@ -1,0 +1,174 @@
+.page {
+  min-height: 100%;
+  background: #0d0d0d;
+  color: #ddd;
+  padding: 20px 24px;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.pageTitle {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: #00ff88;
+  font-weight: normal;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project {
+  border: 1px solid #1e1e1e;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #111;
+}
+
+.projectHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #161616;
+  border-bottom: 1px solid #1e1e1e;
+  flex-wrap: wrap;
+}
+
+.projectName {
+  font-size: 0.7rem;
+  color: #eee;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}
+
+.tool {
+  font-size: 0.4rem;
+  color: #06c755;
+  border: 1px solid #06c755;
+  padding: 3px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.08em;
+}
+
+.projectBody {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 16px;
+  padding: 16px;
+}
+
+/* Thumbnail button */
+.imgBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.imgThumb {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 260px;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.desc {
+  font-size: 0.6rem;
+  color: #888;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+
+.features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.features li {
+  font-size: 0.5rem;
+  color: #aaa;
+  letter-spacing: 0.04em;
+  line-height: 1.8;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.modalInner {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  cursor: default;
+}
+
+.modalImgEl {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.modalClose {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.45rem;
+  color: #888;
+  background: transparent;
+  border: 1px solid #333;
+  padding: 8px 16px;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.modalClose:hover {
+  color: #fff;
+  border-color: #666;
+}
+
+@media (max-width: 520px) {
+  .projectBody {
+    grid-template-columns: 1fr;
+  }
+  .imgPlaceholder {
+    aspect-ratio: 16 / 7;
+    max-height: 120px;
+  }
+}

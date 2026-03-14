@@ -1,0 +1,18 @@
+.btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.45rem;
+  letter-spacing: 0.05em;
+  color: #888;
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+}
+
+.btn:hover {
+  color: #eee;
+  border-color: #555;
+}

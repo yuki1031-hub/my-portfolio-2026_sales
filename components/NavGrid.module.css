@@ -1,0 +1,27 @@
+.wrapper {
+  width: 100%;
+  padding: 4px 8px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.rowCentered {
+  display: flex;
+  justify-content: center;
+}
+
+.rowCentered > * {
+  width: 33.333%;
+}
+
+@media (max-width: 520px) {
+  .rowCentered > * {
+    width: 40%;
+  }
+}

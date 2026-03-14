@@ -1,0 +1,89 @@
+.page {
+  min-height: 100%;
+  background: #0d0d0d;
+  color: #ddd;
+  padding: 20px 24px;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.pageTitle {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: #ff4444;
+  font-weight: normal;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #111;
+  border: 1px solid #1e1e1e;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 460px;
+  width: 100%;
+}
+
+.ytIcon {
+  width: 52px;
+  height: 52px;
+  background: #cc0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.channelName {
+  font-size: 0.7rem;
+  color: #eee;
+  letter-spacing: 0.08em;
+}
+
+.desc {
+  font-size: 0.4rem;
+  color: #888;
+  line-height: 2.2;
+  letter-spacing: 0.03em;
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.4rem;
+  color: #ff4444;
+  border: 1px solid #ff4444;
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  transition: background 0.2s;
+  width: fit-content;
+}
+
+.btn:hover {
+  background: rgba(255, 68, 68, 0.1);
+}
