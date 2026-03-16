@@ -1,5 +1,3 @@
-'use client';
-import { useState } from 'react';
 import BackButton from '../../components/BackButton';
 import styles from './page.module.css';
 
@@ -8,35 +6,32 @@ const PROJECTS = [
     id: 'ijin',
     name: '性格診断（点数制ロジック）',
     tool: 'Lステップ',
+    badges: ['Lステップ', '9問スコア加算', '8パターン分岐', 'シナリオ設計'],
     desc: '9問のスコア加算方式で、合計点数に応じて8パターンの偉人キャラクターを診断。シナリオ分岐とリッチメニュー連動で没入感のある体験を設計。',
-    features: [
-      '9問スコア加算ロジック実装',
-      '8パターン診断結果シナリオ',
-      '合計スコア判定ロジック',
-      'リッチメニュー連動',
-      'シナリオ分岐設計',
-    ],
-    image: '/images/ijindemo.gif',
+    image: '/images/ijin.png',
+    notionUrl: 'https://flying-glazer-dfd.notion.site/32591932982b80bcaab8e0c287fbab7c?source=copy_link',
   },
   {
     id: 'color',
-    name: '回答フォーム',
+    name: '予約×自動化シナリオ',
     tool: 'Lステップ',
-    desc: '回答フォーム×タグ付け方式。希望カラー・肌トーン・ダメージ具合を回答してもらい、タグ付けで顧客データを自動管理。リマインダー配信にも連動。',
-    features: [
-      '回答フォーム設計',
-      'タグ付け自動化',
-      '顧客セグメント管理',
-      'リマインダー配信連動',
-      'パーソナライズ返信',
-    ],
-    image: '/images/カラー１.gif',
+    badges: ['Lステップ', '回答フォーム', 'タグ出し分け', 'LINE内CV', 'CV後シナリオ', '例外応答', 'リマインダー'],
+    desc: 'LINE追加からユーザーの出し分け、予約完了・リピート促進まで全自動で動くエステサロン向けシナリオ',
+    image: '/images/dainamik.png',
+    notionUrl: 'https://flying-glazer-dfd.notion.site/LINE-32591932982b80d6959cc418402ce460?source=copy_link', 
+  },
+  {
+    id: 'richmenu',
+    name: 'リッチメニュー構築',
+    tool: 'Lステップ',
+    badges: ['Lステップ', 'Canva', '3分割レイアウト'],
+    desc: '転職相談サービス向けのリッチメニュー。3分割レイアウトで各ボタンに外部URLを設定。Canvaでクリエイティブを制作しLステップに実装。',
+    image: '/images/rm-thumbnail.png',
+    notionUrl: 'https://flying-glazer-dfd.notion.site/32591932982b8084b5fcdbcd5bb49b00?source=copy_link', 
   },
 ];
 
 export default function Chatbot() {
-  const [expanded, setExpanded] = useState<string | null>(null);
-
   return (
     <div className={styles.page}>
       <div className={styles.topBar}>
@@ -44,59 +39,37 @@ export default function Chatbot() {
         <h2 className={styles.pageTitle}>// CHATBOT</h2>
       </div>
 
-      <div className={styles.projects}>
+      <div className={styles.grid}>
         {PROJECTS.map((p) => (
-          <div key={p.id} className={styles.project}>
-            <div className={styles.projectHeader}>
-              <span className={styles.projectName}>{p.name}</span>
-              <span className={styles.tool}>{p.tool}</span>
+          <div key={p.id} className={styles.card}>
+            <div className={styles.thumb}>
+              <img src={p.image} alt={p.name} className={styles.thumbImg} />
             </div>
-            <div className={styles.projectBody}>
-              <button
-                className={styles.imgBtn}
-                onClick={() => setExpanded(p.id)}
-                aria-label={`Expand screenshot of ${p.name}`}
-              >
-                <img src={p.image} alt={p.name} className={styles.imgThumb} />
-              </button>
-              <div className={styles.info}>
-                <p className={styles.desc}>{p.desc}</p>
-                <ul className={styles.features}>
-                  {p.features.map((f) => (
-                    <li key={f}>▸ {f}</li>
-                  ))}
-                </ul>
+            <div className={styles.cardBody}>
+              <div className={styles.cardName}>{p.name}</div>
+              <div className={styles.badges}>
+                {p.badges.map((b) => (
+                  <span
+                    key={b}
+                    className={b === 'Lステップ' ? styles.badgeLstep : styles.badgeGray}
+                  >
+                    {b}
+                  </span>
+                ))}
               </div>
+              <div className={styles.cardDesc}>{p.desc}</div>
+              <a
+                href={p.notionUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.detailBtn}
+              >
+                詳細を見る
+              </a>
             </div>
           </div>
         ))}
       </div>
-
-      {/* Modal */}
-      {expanded && (
-        <div
-          className={styles.modal}
-          onClick={() => setExpanded(null)}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Screenshot expanded view"
-        >
-          <div className={styles.modalInner} onClick={(e) => e.stopPropagation()}>
-            <img
-              src={PROJECTS.find((p) => p.id === expanded)?.image}
-              alt="screenshot"
-              className={styles.modalImgEl}
-            />
-            <button
-              className={styles.modalClose}
-              onClick={() => setExpanded(null)}
-              aria-label="Close"
-            >
-              ✕ CLOSE
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

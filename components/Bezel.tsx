@@ -10,10 +10,15 @@ export default function Bezel({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === '/';
+  const noBezel = pathname === '/chatbot' || pathname === '/lp-works';
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  if (noBezel) {
+    return <>{children}</>;
+  }
 
   return (
     <div className={styles.bezel}>

@@ -18,7 +18,7 @@
 .pageTitle {
   font-size: 0.65rem;
   letter-spacing: 0.25em;
-  color: #e60073;
+  color: #e111;
   font-weight: normal;
 }
 
@@ -53,17 +53,17 @@
 }
 
 .input::placeholder {
-  color: #e60073;
+  color: #111;
   opacity: 1;
 }
 
 .inputOrange::placeholder {
-  color: #3b3b9c;
+  color: #111;
   opacity: 1;
 }
 
 .inputYellow::placeholder {
-  color: #e60073;
+  color: #111;
   opacity: 1;
 }
 
@@ -103,7 +103,7 @@
   gap: 16px;
   padding: 40px 0;
   font-size: 0.65rem;
-  color: #e60073;
+  color: #111;
   letter-spacing: 0.1em;
   line-height: 2;
 }
