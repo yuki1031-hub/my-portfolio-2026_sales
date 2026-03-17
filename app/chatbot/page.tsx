@@ -21,6 +21,15 @@ const PROJECTS = [
     notionUrl: 'https://flying-glazer-dfd.notion.site/LINE-32591932982b80d6959cc418402ce460?source=copy_link', 
   },
   {
+    id: 'flow',
+    name: 'URLパラメータ別シナリオ出し分け',
+    tool: 'Lステップ',
+    badges: ['Lステップ', 'URLパラメータ別出し分け', 'ダイナミックメッセージ', '回答フォーム×タグ付け', 'CV後シナリオ'],
+    desc: 'Instagram広告・Google広告それぞれの流入元に応じてシナリオを自動で出し分け。ヒアリングフォームの回答結果をもとにタグを自動付与し、興味ジャンルに合わせたコース案内を配信する導線を設計・実装。',
+    image: '/images/flow-thumbnail.png',
+    notionUrl: 'https://flying-glazer-dfd.notion.site/URL-32691932982b807b868ef894a5bfb68d?source=copy_link',
+  },
+  {
     id: 'richmenu',
     name: 'リッチメニュー構築',
     tool: 'Lステップ',

@@ -9,32 +9,32 @@
 .bezel {
   position: fixed;
   inset: 0;
-  background-color: #c8c8c8;
+  background-color: #5C1A82;
   display: flex;
   flex-direction: column;
   /* 上部・左右: 元の2倍 (42→84, 48→96) */
   padding: 84px 96px 0;
   box-shadow:
-    inset 10px 10px 24px rgba(255, 255, 255, 0.35),
-    inset -10px -10px 24px rgba(0, 0, 0, 0.22),
-    inset 0 0 50px rgba(0, 0, 0, 0.10),
-    inset 4px 4px 10px rgba(255, 255, 255, 0.28),
-    inset -4px -4px 10px rgba(0, 0, 0, 0.18);
+    inset 10px 10px 24px rgba(255, 255, 255, 0.15),
+    inset -10px -10px 24px rgba(0, 0, 0, 0.35),
+    inset 0 0 50px rgba(0, 0, 0, 0.20),
+    inset 4px 4px 10px rgba(255, 255, 255, 0.10),
+    inset -4px -4px 10px rgba(0, 0, 0, 0.30);
 }
 
 .screen {
   flex: 1;
-  background: #0d0d0d;
+  background: #f8f8f8;
   border-radius: 10px 10px 0 0;
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
   box-shadow:
-    inset 0 0 60px rgba(0, 0, 0, 0.9),
-    inset 0 4px 16px rgba(0, 0, 0, 0.8),
-    inset 4px 0 12px rgba(0, 0, 0, 0.5),
-    inset -4px 0 12px rgba(0, 0, 0, 0.5),
-    inset 0 -4px 12px rgba(0, 0, 0, 0.4),
+    inset 0 0 60px rgba(0, 0, 0, 0.08),
+    inset 0 4px 16px rgba(0, 0, 0, 0.06),
+    inset 4px 0 12px rgba(0, 0, 0, 0.04),
+    inset -4px 0 12px rgba(0, 0, 0, 0.04),
+    inset 0 -4px 12px rgba(0, 0, 0, 0.03),
     0 0 0 5px #aaaaaa,
     0 0 0 6px #999999;
 }
@@ -43,10 +43,10 @@
   width: 4px;
 }
 .screen::-webkit-scrollbar-track {
-  background: #0d0d0d;
+  background: #f8f8f8;
 }
 .screen::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #cccccc;
   border-radius: 2px;
 }
 
@@ -110,9 +110,9 @@
   width: 100%;
   height: 33.33%;
   top: 33.33%;
-  background: #888888;
+  background: #1a1a1a;
   border-radius: 3px;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3), inset 0 -1px 2px rgba(255,255,255,0.2);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.5), inset 0 -1px 2px rgba(255,255,255,0.08);
 }
 
 .dpad::after {
@@ -121,9 +121,9 @@
   height: 100%;
   width: 33.33%;
   left: 33.33%;
-  background: #888888;
+  background: #1a1a1a;
   border-radius: 3px;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3), inset 0 -1px 2px rgba(255,255,255,0.2);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.5), inset 0 -1px 2px rgba(255,255,255,0.08);
 }
 
 /* 中央ボタン群 */
@@ -142,17 +142,17 @@
 .smallBtn {
   width: 44px;
   height: 12px;
-  background: #999999;
+  background: #1a1a1a;
   border-radius: 6px;
   font-family: 'Dot Gothic 16', sans-serif;
   font-size: 0.22rem;
-  color: #666666;
+  color: #555555;
   display: flex;
   align-items: center;
   justify-content: center;
   letter-spacing: 0.05em;
   transform: rotate(-10deg);
-  box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.5);
 }
 
 /* A/B ボタン */
@@ -167,17 +167,17 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #e60073;
+  background: #1a1a1a;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Dot Gothic 16', sans-serif;
   font-size: 0.4rem;
-  color: #ffffff;
+  color: #888888;
   box-shadow:
-    0 5px 0 #a0004f,
-    0 0 0 2px rgba(0,0,0,0.15),
-    inset 0 2px 4px rgba(255,255,255,0.25);
+    0 5px 0 #0a0a0a,
+    0 0 0 2px rgba(0,0,0,0.3),
+    inset 0 2px 4px rgba(255,255,255,0.08);
   letter-spacing: 0;
 }
 
@@ -202,7 +202,7 @@
     width: 36px;
     height: 36px;
     font-size: 0.35rem;
-    box-shadow: 0 3px 0 #a0004f, 0 0 0 2px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 0 #0a0a0a, 0 0 0 2px rgba(0,0,0,0.3);
   }
 
   .smallBtn {
