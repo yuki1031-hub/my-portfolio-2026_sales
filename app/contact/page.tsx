@@ -10,13 +10,29 @@ export default function Contact() {
   const [sending, setSending] = useState(false);
   const router = useRouter();
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSending(true);
-    await new Promise((r) => setTimeout(r, 800));
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setSending(true);
+
+  const form = e.currentTarget;
+  const email   = (form.elements.namedItem('email')   as HTMLInputElement).value;
+  const subject = (form.elements.namedItem('subject') as HTMLInputElement).value;
+  const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
+
+  const res = await fetch('/api/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, subject, message }),
+  });
+
+  if (res.ok) {
     setSent(true);
-    setSending(false);
-  };
+  } else {
+    alert('送信に失敗しました。時間をおいて再試行してください。');
+  }
+
+  setSending(false);
+};
 
   const handleBack = async () => {
     await runPageTransition();
