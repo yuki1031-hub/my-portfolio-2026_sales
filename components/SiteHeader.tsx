@@ -39,6 +39,14 @@ export default function SiteHeader() {
               <button className={styles.navLink} onClick={() => navigate('/#works')}>WORKS</button>
               <button className={styles.navLink} onClick={() => navigate('/contact')}>CONTACT</button>
               <button className={styles.navLink} onClick={() => navigate('/about')}>ABOUT</button>
+              <a
+                className={styles.navLinkDev}
+                href="https://my-portfolio-2026-tech.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Dev Portfolio
+              </a>
             </nav>
           </div>
         </div>
@@ -95,6 +103,15 @@ export default function SiteHeader() {
           <button className={styles.panelItem} onClick={() => navigate('/about')}>
             <span className={styles.panelEn}>About</span>
           </button>
+          <a
+            className={`${styles.panelItem} ${styles.panelItemDev}`}
+            href="https://my-portfolio-2026-tech.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
+          >
+            <span className={styles.panelEn}>Dev Portfolio</span>
+          </a>
         </nav>
 
         {/* 透かし花 */}

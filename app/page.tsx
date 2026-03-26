@@ -145,7 +145,12 @@ export default function Home() {
                 <img src={p.image} alt={p.name} className={styles.cardImg} />
               </div>
               <div className={styles.cardInfo}>
-                <span className={p.category === 'LINE' ? styles.categoryLine : styles.categoryLp}>{p.category}</span>
+                <div className={styles.badgeRow}>
+                  <span className={p.category === 'LINE' ? styles.categoryLine : styles.categoryLp}>{p.category}</span>
+                  {p.badges.includes('Lステップ') && (
+                    <span className={styles.categoryLstep}>Lステップ</span>
+                  )}
+                </div>
                 <div className={styles.cardName}>{p.name}</div>
               </div>
               {/* ホバー / タップ オーバーレイ */}
@@ -189,7 +194,12 @@ export default function Home() {
                     <img src={p.image} alt={p.name} className={styles.cardImg} />
                   </div>
                   <div className={styles.cardInfo}>
-                    <span className={p.category === 'LINE' ? styles.categoryLine : styles.categoryLp}>{p.category}</span>
+                    <div className={styles.badgeRow}>
+                      <span className={p.category === 'LINE' ? styles.categoryLine : styles.categoryLp}>{p.category}</span>
+                      {p.badges.includes('Lステップ') && (
+                        <span className={styles.categoryLstep}>Lステップ</span>
+                      )}
+                    </div>
                     <div className={styles.cardName}>{p.name}</div>
                   </div>
                   <div className={styles.cardOverlay}>

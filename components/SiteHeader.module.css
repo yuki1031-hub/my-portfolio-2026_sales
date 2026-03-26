@@ -70,6 +70,27 @@
   opacity: 0.5;
 }
 
+/* Dev Portfolio ボタン（白背景・黒文字・枠線） */
+.navLinkDev {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  color: #111111;
+  letter-spacing: 0.1em;
+  background: #ffffff;
+  border: 1.5px solid #111111;
+  border-radius: 6px;
+  padding: 4px 12px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.navLinkDev:hover {
+  background: #111111;
+  color: #ffffff;
+}
+
 /* ─ 右（花ボタン） ─ */
 .right {
   display: flex;
@@ -248,6 +269,7 @@
 .panelOpen .panelItem:nth-child(1) { opacity: 1; transform: translateX(0); transition-delay: 0.1s; }
 .panelOpen .panelItem:nth-child(2) { opacity: 1; transform: translateX(0); transition-delay: 0.18s; }
 .panelOpen .panelItem:nth-child(3) { opacity: 1; transform: translateX(0); transition-delay: 0.26s; }
+.panelOpen .panelItem:nth-child(4) { opacity: 1; transform: translateX(0); transition-delay: 0.34s; }
 
 .panelEn {
   display: block;
@@ -257,6 +279,26 @@
   line-height: 1.1;
   color: inherit;               /* 親（panelItem）の color を継承してホバー色変化が効く */
   transition: color 0.25s ease;
+}
+
+/* Dev Portfolio: 白背景・黒文字 */
+.panelItemDev {
+  text-decoration: none;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 8px;
+  color: #111111 !important;
+  border-bottom: none !important;
+}
+
+.panelItemDev:hover {
+  color: #111111 !important;
+  background: #f0f0f0;
+}
+
+.panelItemDev:hover .panelEn {
+  color: #111111 !important;
 }
 
 /* ─ 透かし花 ─ */

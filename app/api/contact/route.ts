@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
   try {
     await resend.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>', // 独自ドメイン取得後は変更
-      to: 'あなたのメールアドレス@gmail.com',            // 受け取りたいアドレス
+      to: 'hishikawa1031@gmail.com',            // 受け取りたいアドレス
       replyTo: email,
       subject: `[Portfolio] ${subject}`,
       text: `From: ${email}\n\n${message}`,

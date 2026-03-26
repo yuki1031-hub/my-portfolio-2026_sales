@@ -170,6 +170,29 @@
   white-space: nowrap;
 }
 
+/* バッジ行（LINE + Lステップを横並び） */
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+/* Lステップ: LINEと同配色 */
+.categoryLstep {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 12px;
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #06c755;
+  color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
 .cardName {
   font-size: 15px;
   color: #111111;
